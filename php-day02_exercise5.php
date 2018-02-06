@@ -14,13 +14,18 @@ if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-// Create database
-$sql = "CREATE DATABASE $dbname";
+// sql to create table
+$sql = "CREATE TABLE php_day02_db.family (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+firstname VARCHAR(20) NOT NULL,
+lastname VARCHAR(20) NOT NULL,
+dob DATE,
+)";
 
 if (mysqli_query($conn, $sql)) {
-    echo "Database $dbname created successfully! \n";
+    echo "Table family created successfully" . "\n";
 } else {
-    echo "Error creating database $dbname: " . mysqli_error($conn);
+    echo "Error creating table: " . mysqli_error($conn) . "\n";
 }
 
 mysqli_close($conn);

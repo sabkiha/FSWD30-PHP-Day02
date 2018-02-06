@@ -17,7 +17,7 @@
 function divideFunction($num1, $num2)
 {
  $div = $num1 / $num2;
- echo "<p style='font-family: sans-serif; font-size: 30px; color: #00f'>"."The result of the divition is: $div"."</p>";
+ echo "<p style='font-family: sans-serif; font-size: 30px; color: #00f'>"."The result of the division is: $div"."</p>";
 }
 divideFunction(intval($_POST["NoA"]), intval($_POST["NoB"]));
 
